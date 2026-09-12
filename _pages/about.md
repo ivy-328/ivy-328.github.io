@@ -1,56 +1,187 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Caihang Liang"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+I am a Master's student in **Journalism and Communication** at **Nanjing University**, specializing in **Computational Communication**.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+My research lies at the intersection of **computational communication, generative artificial intelligence, visual communication, and quantitative social science**.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+I am particularly interested in understanding how AI-generated and platform-mediated content is produced, evaluated, circulated, and shaped by algorithms and human–AI interaction.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+[Research](#research){: .btn .btn--primary }
+[Email](mailto:18751263369@163.com){: .btn }
+[中文](/zh/){: .btn }
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+---
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+## About Me
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Hi! I am **Caihang Liang (梁蔡航)**. I am currently pursuing a Master's degree in Journalism and Communication at Nanjing University, where I specialize in Computational Communication. I expect to graduate in June 2029.
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+My research interests focus on the intersection of computational communication, generative AI, visual communication, and quantitative social science. I am especially interested in how algorithms and platforms shape the production, evaluation, and circulation of visual and social media content.
 
-**Markdown generator**
+Before joining Nanjing University, I studied **Network and New Media at Nanjing Normal University**, where I developed an interdisciplinary background in communication research, data analysis, journalism, and digital media.
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+My advisor at Nanjing University is **Yi-Xin Zhou**.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+---
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+## Research
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+### Research Interests
+
+- **Computational Communication**
+- **Generative AI & Visual Communication**
+- **AI Aesthetics**
+- **Social Media & Platform Studies**
+- **Quantitative & Computational Methods**
+
+### AI Aesthetics and Generative Portraiture
+
+My current research examines the aesthetic quality and algorithmic mechanisms of consumer-grade AI-generated portraits.
+
+My undergraduate thesis is titled:
+
+> **HumanAesExpert-Based Quantitative Content Analysis: Exploring Aesthetic Professionalism and Deficiencies of Chinese Consumer-Grade AI Portraiture**
+
+The study analyzes approximately **800 AI-generated portrait samples from Douyin and Xiaohongshu**, drawing on the HumanAesExpert framework and fine-grained human-image aesthetic dimensions.
+
+It investigates:
+
+- aesthetic styles and quality differences in AI-generated portraits;
+- facial, appearance, and environmental aesthetics;
+- differences between platform-native effects and third-party generative AI tools;
+- the relationship between prompting and aesthetic outcomes;
+- algorithmic aesthetic norms and aesthetic homogenization.
+
+The project combines **quantitative content analysis, statistical modeling, visual communication theory, and computational approaches**.
+
+**Status:** Manuscript in preparation.
+
+### Online Public Opinion Dynamics
+
+I am also involved in an ongoing collaborative research project on **dynamic response strategies and secondary public-opinion dynamics during online public events**.
+
+The project explores how response timing interacts with emotional dynamics and the maturity of available evidence, using approaches including **event-sequence analysis, causal inference, and multi-agent simulation**.
+
+Because the project is currently under development, detailed hypotheses and project information are not publicly disclosed.
+
+---
+
+## Publications
+
+### Journal Article
+
+**Liang, Caihang**, & Liu, Yichen. (2025).  
+**强制通行视角下乡村旅游数字提升困境剖析与治理路径**  
+*国际公关 (International Public Relations)*, **2025(16)**, 57–59.
+
+This study examines challenges in the digital transformation of rural tourism and proposes governance pathways involving platform mobilization, resident participation, and content production.
+
+---
+
+## Selected Research Projects
+
+### Digital Literacy and Rural Platformization
+**Principal Investigator · National Undergraduate Innovation Project · 2024–2025**
+
+Investigated how platform-mediated translation activities and influential online actors contribute to the development of digital literacy among rural residents.
+
+The project drew on Actor–Network Theory and process tracing and was rated **Excellent** upon completion.
+
+### Digital Enhancement of Rural Tourism
+**Project Lead · Challenge Cup Project · 2025**
+
+Conducted research across **29 tourism villages in the Yangtze River Delta** and developed a multi-level framework for rural tourism digital transformation involving digital governance, digital talent development, and digital application.
+
+### Digital Memory and Collaborative Documents
+**Co-author · 2025**
+
+Examined how collaborative online documents mediate memory, identity, resistance, and emotional expression among young people.
+
+The study received **First Prize at the 9th Guangdong Graduate Forum on Journalism and Communication**.
+
+---
+
+## Education
+
+### Nanjing University
+**Master of Journalism and Communication**  
+*Computational Communication Track*  
+2026 – 2029 (expected)
+
+Advisor: **Yi-Xin Zhou**
+
+### Nanjing Normal University
+**B.A. in Network and New Media**  
+2022 – 2026
+
+- GPA: **4.05 / 5.00**
+- Major Rank: **5 / 47**
+
+Selected coursework:
+
+- Computational Communication
+- Big Data & Intelligent Information Processing
+- Human–Computer Interaction and Media Integration
+- Data Journalism and Information Visualization
+
+---
+
+## Methods & Skills
+
+### Computational & Quantitative Methods
+
+Quantitative Content Analysis · Data Mining · Statistical Modeling · Regression Analysis · Causal Inference · Machine Learning · Natural Language Processing · Social Media Data Collection · Data Visualization · Multi-Agent Simulation
+
+### Programming & Research Tools
+
+**Python · R · SPSS · Gephi · NVivo · Git**
+
+### Python & Data Analysis
+
+pandas · NumPy · Matplotlib · scikit-learn · Web Scraping · APIs · NLP · Machine Learning · LLM Applications
+
+---
+
+## Selected Media Experience
+
+Before focusing primarily on computational communication research, I gained professional experience in journalism and digital media.
+
+**Xinhua Daily Media Group**  
+Visual Journalism Intern · 2024
+
+**Jiangsu Xuyi Lobster Co., Ltd.**  
+Livestream & E-commerce Operations Intern · 2023
+
+**Xuyi County Converged Media Center**  
+Journalism Intern · 2023
+
+These experiences shaped my interest in the relationship between digital platforms, media production, technology, and communication.
+
+---
+
+## Selected Honors
+
+- First Prize, 9th Guangdong Graduate Forum on Journalism and Communication
+- Second Prize, East China Region, China Collegiate Computing Competition
+- First Prize, University-level “Challenge Cup” Competition
+- Second Prize, Jiangsu Education Journalism Award
+- Excellent Completion, National Undergraduate Innovation Project
+
+---
+
+## Contact
+
+**Caihang Liang**  
+Master's Student in Journalism and Communication  
+Computational Communication Track  
+Nanjing University
+
+Email: [18751263369@163.com](mailto:18751263369@163.com)  
+GitHub: [ivy-328](https://github.com/ivy-328)
