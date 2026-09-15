@@ -1,0 +1,134 @@
+- id: ai-aesthetics
+  featured: true
+  title_en: AI Aesthetics & Generative Portraiture
+  title_zh: AI 美学与生成式人像
+  status_en: Working Paper · Manuscript in preparation
+  status_zh: 工作论文 · 准备投稿
+  period: 2025–2026
+  summary_en: Examines the aesthetic quality and professionalization of consumer-grade
+    AI portraiture in China using HumanAesExpert-inspired dimensions and quantitative
+    content analysis.
+  summary_zh: 基于 HumanAesExpert 人像美学框架与定量内容分析，考察国产消费级 AI 写真的美学质量、专业主义梯度与影响机制。
+  abstract_en: Using a 12-dimensional portrait aesthetic framework, this study quantitatively
+    analyzes 800 valid AI portrait samples collected from Douyin and Xiaohongshu.
+    It proposes a two-stage “basic qualification–professional advancement” model and
+    a dual-track progressive driving model, identifies overall convergence with localized
+    platform differences, and finds heterogeneous prompt effects rather than universal
+    prompt determinism.
+  abstract_zh: 研究引入 HumanAesExpert 模型及 12 维人像美学标准，对抖音、小红书近一年 800 份有效 AI 写真样本展开定量分析。研究提出“基础合格—专业进阶”双阶段模型与“双轨递进驱动模型”，发现不同平台呈“整体趋同、局部差异”，且提示词效应具有正向赋能、负向惩罚与无显著影响等异质性。
+  methods:
+  - Quantitative Content Analysis
+  - HumanAesExpert
+  - Statistical Modeling
+  - Douyin
+  - Xiaohongshu
+- id: rural-tourism-published
+  featured: true
+  title_en: 'Digital Enhancement of Rural Tourism: Challenges and Governance Pathways'
+  title_zh: 强制通行视角下乡村旅游数字提升困境剖析与治理路径
+  status_en: Published · First Author
+  status_zh: 已发表 · 第一作者
+  period: '2025'
+  venue_en: International Public Relations (国际公关), 2025(16), 57–59
+  venue_zh: 《国际公关》2025年第16期，57–59页
+  doi: 10.16645/j.cnki.cn11-5281/c.2025.16.034
+  summary_en: Analyzes bottlenecks in rural-tourism digital enhancement through an
+    actor-network / obligatory-passage-point perspective and proposes platform mobilization,
+    resident participation, and content production as governance pathways.
+  summary_zh: 从强制通行点与平台赋能视角剖析乡村旅游数字提升问题，指出数字基础设施、数字素养、技术采纳与应用创新等困境，并提出平台征召、村民动员、内容生产三条治理路径。
+  abstract_zh: 在数字化浪潮背景下，研究以乡村旅游数字提升中的利益协调为问题意识，通过案例分析剖析平台赋能逻辑。研究发现，乡村旅游数字提升存在数字基础设施滞后、数字素养断层、技术采纳意愿低迷、应用创新乏力等问题，并提出从平台征召、村民动员、内容生产三个方面构建治理路径，以系统性思维推动乡村旅游可持续发展。
+  methods:
+  - Case Analysis
+  - Actor–Network Theory
+  - Platform Governance
+- id: iwom-nostalgia
+  featured: true
+  title_en: Online Word-of-Mouth, Nostalgia & Rural Tourism Intention
+  title_zh: 网络口碑如何影响乡村旅游？——以怀旧情感为中介
+  status_en: Research in Progress
+  status_zh: 研究进行中
+  period: 2025–
+  summary_en: Investigates whether nostalgic emotion mediates the relationship between
+    online word-of-mouth and rural tourism intention, using survey research and structural
+    equation modeling.
+  summary_zh: 研究网络口碑如何通过怀旧情感影响乡村旅游意愿，构建“网络口碑—怀旧情感—旅游意向”中介模型，并计划采用问卷、结构方程模型与中介效应检验。
+  methods:
+  - Survey
+  - SEM
+  - Mediation Analysis
+  - Sobel Test
+- id: public-opinion
+  featured: false
+  title_en: Response Timing & Secondary Public-Opinion Dynamics
+  title_zh: 回应节奏与二次舆情动态
+  status_en: Collaborative Research · Ongoing
+  status_zh: 合作研究 · 进行中
+  period: 2026–
+  summary_en: An ongoing collaborative project on response timing, emotional dynamics,
+    evidence maturity, and secondary public-opinion prediction in online hot events.
+  summary_zh: 参与热点事件中回应节奏、情绪态势、证据成熟度与二次舆情预测相关研究，使用事件序列、因果推断和多智能体仿真等方法。
+  methods:
+  - Event Sequence Analysis
+  - Causal Inference
+  - Multi-Agent Simulation
+- id: bride-price
+  featured: false
+  title_en: Why Does the Bride-Price Issue Repeatedly Trend Online?
+  title_zh: 彩礼问题缘何频频冲上热搜？——基于新浪微博平台彩礼话题的数据分析
+  status_en: Selected Computational Project
+  status_zh: 计算传播项目
+  period: '2025'
+  summary_en: Analyzed 5,362 Weibo comments using SnowNLP sentiment analysis and LDA
+    topic modeling to explore gender, region, and attitudes toward bride-price debates.
+  summary_zh: 抓取 5,362 条新浪微博评论，使用 SnowNLP 情感分析与 LDA 主题模型，探索性别、地域与彩礼议题情绪认知之间的关系。
+  methods:
+  - Web Scraping
+  - SnowNLP
+  - LDA
+  - Sentiment Analysis
+- id: digital-literacy
+  featured: false
+  title_en: Digital Literacy & Rural Platformization
+  title_zh: 数字乡村战略背景下网红节点转译活动提升村民数字素养的动力机制研究
+  status_en: National Undergraduate Innovation Project · Excellent Completion
+  status_zh: 国家级大创 · 优秀结项
+  period: 2024–2025
+  summary_en: A process-tracing study of how influential online actors, translation
+    activities, and platform networks can improve rural residents’ digital literacy.
+  summary_zh: 基于行动者网络理论与理论构建型过程追踪法，研究网红节点转译活动如何通过问题呈现、征召动员和利益赋予提升村民数字素养。
+  image: /images/nju/innovation-team.jpg
+  methods:
+  - Actor–Network Theory
+  - Process Tracing
+  - Fieldwork
+- id: shared-doc-memory
+  featured: false
+  title_en: Shared Documents, Youth Memory & Collective Identity
+  title_zh: 我们的故事——作为中介的共享文档在青年群体连接、抵抗、调适高中记忆中的作用研究
+  status_en: Second Author · Forum First Prize
+  status_zh: 二作 · 论坛一等奖
+  period: '2025'
+  summary_en: Uses mediatized-memory theory to examine how collaborative documents
+    mediate youth memory, emotional expression, boundary negotiation, and collective
+    identity.
+  summary_zh: 基于中介化记忆理论，考察青年如何通过共享文档书写高中记忆，并在匿名化边界协商与主题化认同构建中形成以怀旧和反叛为核心的集体认同。
+  methods:
+  - Mediatized Memory
+  - Qualitative Analysis
+  - Digital Culture
+- id: 29-villages
+  featured: false
+  title_en: Digital Enhancement of Rural Tourism across 29 Villages
+  title_zh: 村种一棵“数”：乡村旅游数字提升的机制研究——基于长三角29个村的调研
+  status_en: Project Lead · Challenge Cup University First Prize
+  status_zh: 负责人 · 挑战杯校一等奖
+  period: '2025'
+  summary_en: Field research across 29 tourism villages in the Yangtze River Delta,
+    proposing a root–trunk–canopy framework spanning digital governance, talent development,
+    and application scenarios.
+  summary_zh: 调研长三角29个旅游村，构建“树根—树干—树冠”三级联动的数字提升机制，从数字治理、数字人才与数字应用空间提出系统性方案。
+  image: /images/nju/innovation-visit.jpg
+  methods:
+  - Field Research
+  - Digital Governance
+  - Comparative Case Analysis

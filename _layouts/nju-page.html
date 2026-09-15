@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<script>document.body.classList.add('nju-theme');</script>
+{% include nju-header.html %}
+<main class="nju-site nju-inner-page">
+  {{ content }}
+</main>
+{% include nju-footer.html %}
+<script defer src="{{ '/assets/js/nju-purple.js' | relative_url }}"></script>

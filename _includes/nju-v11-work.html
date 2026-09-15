@@ -1,0 +1,32 @@
+{% assign lang = include.lang | default: "en" %}
+<section class="v11-portfolio-shell" id="selected-news-work">
+  <header class="v11-section-heading">
+    <p class="v11-eyebrow">{% if lang == "zh" %}作品 / WORK{% else %}WORK / 作品{% endif %}</p>
+    <h1>{% if lang == "zh" %}精选新闻作品{% else %}Selected News Works{% endif %}</h1>
+  </header>
+
+  <div class="v11-work-grid">
+    {% for item in site.data.portfolio_v11.news %}
+      <article class="v11-work-card{% if item.image == "" %} v11-work-card--text{% endif %}">
+        {% if item.image != "" %}
+          <a class="v11-work-cover" href="{{ item.url }}" target="_blank" rel="noopener">
+            <img src="{{ item.image | relative_url }}"
+                 alt="{% if lang == "zh" %}{{ item.title_zh }}{% else %}{{ item.title_en }}{% endif %}"
+                 loading="lazy">
+          </a>
+        {% else %}
+          <a class="v11-work-cover v11-work-cover--placeholder" href="{{ item.url }}" target="_blank" rel="noopener" aria-label="Open story">
+            <span>{% if lang == "zh" %}新闻作品{% else %}JOURNALISM{% endif %}</span>
+          </a>
+        {% endif %}
+        <div class="v11-work-copy">
+          <p class="v11-work-source">{% if lang == "zh" %}{{ item.source_zh }}{% else %}{{ item.source_en }}{% endif %}</p>
+          <h2>{% if lang == "zh" %}{{ item.title_zh }}{% else %}{{ item.title_en }}{% endif %}</h2>
+          <a class="v11-inline-link" href="{{ item.url }}" target="_blank" rel="noopener">
+            {% if lang == "zh" %}查看原文{% else %}View original{% endif %} ↗
+          </a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

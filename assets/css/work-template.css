@@ -1,0 +1,228 @@
+/* Work page v3
+   Adapted to the mature "paper-box" visual system used by the MIT-licensed
+   academic-homepage-template (steven068zzy/academic-homepage-template). */
+
+.work-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: .5rem 0 4rem;
+}
+
+.work-intro {
+  max-width: 760px;
+  margin-bottom: 3.4rem;
+}
+
+.work-kicker {
+  margin: 0 0 .55rem !important;
+  color: #2563eb;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.work-intro h1 {
+  margin: 0 0 1rem;
+  border: 0 !important;
+  padding: 0 !important;
+  color: var(--global-text-color, #1e293b) !important;
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  letter-spacing: -.04em;
+  line-height: 1.05;
+}
+
+.work-intro h1::after {
+  display: none !important;
+}
+
+.work-intro > p:last-child {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.work-section {
+  margin-bottom: 4.25rem;
+}
+
+.work-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid rgba(148,163,184,.32);
+}
+
+.work-section-head h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -.025em;
+}
+
+.work-section-head span {
+  color: #94a3b8;
+  font-size: .78rem;
+}
+
+.work-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: minmax(220px, 34%) 1fr;
+  min-height: 190px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: inherit !important;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  text-decoration: none !important;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 6px 20px rgba(30,64,175,.10);
+}
+
+.work-item--textonly {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.work-image {
+  min-height: 190px;
+  background: #f1f5f9;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.work-item:hover .work-image img {
+  transform: scale(1.025);
+}
+
+.work-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 1.35rem 1.55rem;
+}
+
+.work-item--textonly .work-copy {
+  padding: 1.15rem 1.35rem;
+}
+
+.work-meta {
+  margin-bottom: .45rem;
+  color: #2563eb;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.work-copy h3 {
+  margin: 0 0 .55rem;
+  font-size: 1.17rem;
+  line-height: 1.35;
+  letter-spacing: -.012em;
+}
+
+.work-desc {
+  margin: 0 0 1rem !important;
+  color: #64748b;
+  font-size: .88rem;
+  line-height: 1.65;
+}
+
+.work-cta {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin-top: auto;
+  color: #2563eb;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.work-cta span {
+  transition: transform .2s ease;
+}
+
+.work-item:hover .work-cta span {
+  transform: translate(2px,-2px);
+}
+
+.work-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(148,163,184,.32);
+}
+
+.work-footer a {
+  color: #64748b !important;
+  font-size: .82rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.work-footer a:hover {
+  color: #2563eb !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .work-item {
+    background: rgba(255,255,255,.035);
+    border-color: rgba(255,255,255,.12);
+  }
+
+  .work-intro > p:last-child,
+  .work-desc,
+  .work-footer a {
+    color: #aeb7c5 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .work-section-head {
+    display: block;
+  }
+
+  .work-section-head span {
+    display: block;
+    margin-top: .4rem;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr;
+  }
+
+  .work-image,
+  .work-image img {
+    min-height: 0;
+    aspect-ratio: 16/9;
+  }
+
+  .work-copy {
+    padding: 1.1rem 1.15rem 1.2rem;
+  }
+}

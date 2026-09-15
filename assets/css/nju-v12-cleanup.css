@@ -1,0 +1,303 @@
+/* NJU Purple v1.2 cleanup
+   Goal: smaller cards, more breathing room, merged practice records,
+   and no full-width link blocks. */
+
+:root {
+  --v12-purple: #4d0099;
+  --v12-deep: #31105f;
+  --v12-ink: #2c2630;
+  --v12-muted: #756d7c;
+  --v12-line: rgba(77, 0, 153, 0.14);
+  --v12-paper: #fbf8fc;
+  --v12-card: rgba(255, 255, 255, 0.88);
+}
+
+.v12-page {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 76px 0 104px;
+}
+
+.v12-page-head {
+  max-width: 980px;
+  margin: 0 0 48px;
+}
+
+.v12-kicker,
+.v12-section-label {
+  color: var(--v12-purple);
+  font-size: 0.88rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.v12-page-head h1 {
+  margin: 14px 0 18px;
+  color: var(--v12-deep);
+  font-size: clamp(2.8rem, 5.2vw, 5.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.v12-page-head p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--v12-muted);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.75;
+}
+
+/* Work: cards are intentionally not allowed to fill the entire viewport. */
+.v12-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 520px));
+  justify-content: space-between;
+  gap: 30px 34px;
+}
+
+.v12-work-card {
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--v12-line);
+  border-radius: 22px;
+  background: var(--v12-card);
+  box-shadow: 0 14px 34px rgba(49, 16, 95, 0.055);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.v12-work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 42px rgba(49, 16, 95, 0.09);
+}
+
+.v12-card-link {
+  display: block;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.v12-work-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 285px;
+  overflow: hidden;
+  background: #eee7f2;
+}
+
+.v12-work-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.v12-work-copy {
+  padding: 19px 21px 21px;
+}
+
+.v12-work-copy h2 {
+  margin: 0;
+  color: var(--v12-deep);
+  font-size: clamp(1.12rem, 1.7vw, 1.42rem);
+  line-height: 1.35;
+}
+
+.v12-work-copy p {
+  margin: 10px 0 0;
+  color: var(--v12-muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.v12-inline-link,
+.v12-text-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--v12-purple);
+  font-size: 0.91rem;
+  font-weight: 700;
+}
+
+/* Practice: the two media experiences are one card each:
+   image = cover; text + link = same experience, not another duplicated card. */
+.v12-practice-featured {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.v12-practice-feature-card {
+  overflow: hidden;
+  border: 1px solid var(--v12-line);
+  border-radius: 24px;
+  background: var(--v12-card);
+  box-shadow: 0 16px 36px rgba(49, 16, 95, 0.055);
+}
+
+.v12-practice-cover {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 360px;
+  overflow: hidden;
+  background: #eee7f2;
+}
+
+.v12-practice-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.v12-practice-copy {
+  padding: 23px 24px 25px;
+}
+
+.v12-practice-meta {
+  color: var(--v12-purple);
+  font-size: 0.78rem;
+  font-weight: 720;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.v12-practice-copy h2 {
+  margin: 9px 0 11px;
+  color: var(--v12-deep);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  line-height: 1.25;
+}
+
+.v12-practice-copy p,
+.v12-compact-copy p {
+  margin: 0;
+  color: var(--v12-muted);
+  line-height: 1.72;
+}
+
+.v12-small-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  width: auto !important;
+  min-width: 0 !important;
+  margin-top: 18px;
+  padding: 9px 13px;
+  border: 1px solid rgba(77, 0, 153, 0.22);
+  border-radius: 999px;
+  color: var(--v12-purple) !important;
+  background: rgba(77, 0, 153, 0.035);
+  font-size: 0.88rem;
+  font-weight: 720;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.v12-practice-more {
+  margin-top: 54px;
+  padding-top: 34px;
+  border-top: 1px solid var(--v12-line);
+}
+
+.v12-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 26px;
+  margin-top: 22px;
+}
+
+.v12-compact-card {
+  display: grid;
+  grid-template-columns: minmax(130px, 38%) minmax(0, 1fr);
+  min-height: 178px;
+  overflow: hidden;
+  border: 1px solid var(--v12-line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+}
+
+.v12-compact-card:has(.v12-compact-cover:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.v12-compact-cover {
+  min-height: 178px;
+  overflow: hidden;
+  background: #eee7f2;
+}
+
+.v12-compact-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.v12-compact-copy {
+  padding: 17px 18px 18px;
+}
+
+.v12-compact-copy h3 {
+  margin: 7px 0 8px;
+  color: var(--v12-deep);
+  font-size: 1.12rem;
+  line-height: 1.32;
+}
+
+/* Defensive overrides for older v1.1 link-card styles. */
+.v12-page a {
+  min-height: 0;
+}
+
+.v12-page .v12-small-button,
+.v12-page .v12-text-link,
+.v12-page .v12-inline-link {
+  height: auto !important;
+  max-height: none !important;
+}
+
+@media (max-width: 900px) {
+  .v12-page {
+    width: min(100% - 32px, 720px);
+    padding-top: 54px;
+  }
+
+  .v12-work-grid,
+  .v12-practice-featured,
+  .v12-compact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v12-work-card {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .v12-page {
+    width: min(100% - 24px, 720px);
+    padding: 42px 0 72px;
+  }
+
+  .v12-page-head {
+    margin-bottom: 32px;
+  }
+
+  .v12-practice-copy,
+  .v12-work-copy {
+    padding: 18px;
+  }
+
+  .v12-compact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .v12-compact-cover {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff8f4"/>
+      <stop offset="1" stop-color="#ffe8ef"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#dff3e7"/>
+      <stop offset="1" stop-color="#b9ddc8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="360" fill="url(#sky)"/>
+  <circle cx="240" cy="90" r="70" fill="#fff" opacity=".65"/>
+  <circle cx="1300" cy="80" r="90" fill="#fff" opacity=".4"/>
+  <path d="M0 250C150 220 260 244 410 231c154-13 247-57 420-33 173 24 250 10 387-8 132-18 244-1 383 38v132H0z" fill="url(#grass)"/>
+  <path d="M0 280c220-40 324 20 520-6 213-29 329-61 524-24 168 32 317 8 556-5v115H0z" fill="#9fcfb2" opacity=".55"/>
+  <!-- flowers -->
+  <g transform="translate(130 244)">
+    <path d="M0 56V12M0 35l-17-15M1 42l18-18" stroke="#5f9a70" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="8" r="8" fill="#f4c75c"/><circle cx="-11" cy="8" r="9" fill="#fff"/><circle cx="11" cy="8" r="9" fill="#fff"/><circle cx="0" cy="-3" r="9" fill="#fff"/><circle cx="0" cy="19" r="9" fill="#fff"/>
+  </g>
+  <g transform="translate(1430 228)">
+    <path d="M0 78V20M0 48l-20-20M0 55l19-21" stroke="#5f9a70" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="14" r="8" fill="#f4c75c"/><circle cx="-11" cy="14" r="9" fill="#fff"/><circle cx="11" cy="14" r="9" fill="#fff"/><circle cx="0" cy="3" r="9" fill="#fff"/><circle cx="0" cy="25" r="9" fill="#fff"/>
+  </g>
+  <!-- strawberries -->
+  <g transform="translate(270 252) scale(.55)">
+    <path d="M60 38c29 0 45 16 39 42-7 31-32 53-39 58-7-5-32-27-39-58-6-26 10-42 39-42z" fill="#ef6f9c" stroke="#c94872" stroke-width="4"/>
+    <path d="M60 40c-7-18-25-20-31-12M61 40c8-18 27-20 33-11" fill="none" stroke="#5f9a70" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1210 265) scale(.42)">
+    <path d="M60 38c29 0 45 16 39 42-7 31-32 53-39 58-7-5-32-27-39-58-6-26 10-42 39-42z" fill="#ef6f9c" stroke="#c94872" stroke-width="4"/>
+    <path d="M60 40c-7-18-25-20-31-12M61 40c8-18 27-20 33-11" fill="none" stroke="#5f9a70" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- sleepy cat -->
+  <g transform="translate(700 240)">
+    <ellipse cx="90" cy="62" rx="92" ry="42" fill="#fff8ef" stroke="#cda8a1" stroke-width="3"/>
+    <circle cx="24" cy="45" r="36" fill="#fff8ef" stroke="#cda8a1" stroke-width="3"/>
+    <path d="M1 19L8-7l20 20M42 15L60-7l3 30" fill="#fff8ef" stroke="#cda8a1" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M12 46q8 7 16 0M18 58q5 5 10 0" fill="none" stroke="#795a5f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M128 56c28 0 46 9 57 24" fill="none" stroke="#cda8a1" stroke-width="9" stroke-linecap="round"/>
+    <path d="M48 64c18 5 26 13 29 24" fill="none" stroke="#ef9ebb" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <!-- tiny sparkles -->
+  <g fill="#ef6f9c" opacity=".7"><circle cx="420" cy="205" r="4"/><circle cx="1120" cy="198" r="4"/><circle cx="1510" cy="250" r="3"/></g>
+</svg>

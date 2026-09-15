@@ -1,0 +1,119 @@
+{% assign p = site.data.profile %}
+{% assign lang = page.lang | default: 'en' %}
+<section class="nju-hero">
+  <div class="nju-hero__wash"></div>
+  <div class="nju-hero__inner">
+    <aside class="nju-identity-card reveal">
+      <img src="{{ p.portrait | relative_url }}" alt="{{ p.name_en }}">
+      <p class="nju-signature">{{ p.name_en }}</p>
+      <span>NANJING UNIVERSITY</span>
+    </aside>
+    <div class="nju-hero__copy reveal">
+      <p class="nju-eyebrow">{% if lang == 'zh' %}HELLO · 南京大学 · 计算传播{% else %}HELLO · NANJING UNIVERSITY · COMPUTATIONAL COMMUNICATION{% endif %}</p>
+      <h1>{% if lang == 'zh' %}你好，我是 <span>{{ p.name_zh }}</span>{% else %}Caihang <span>Liang</span>{% endif %}</h1>
+      <div class="nju-hero__labels">
+        <span>⌂ {{ p.school_en }}</span>
+        <span>◈ {% if lang == 'zh' %}{{ p.degree_zh }}{% else %}M.J.C. Student{% endif %}</span>
+        <span>▣ {% if lang == 'zh' %}{{ p.track_zh }}{% else %}{{ p.track_en }}{% endif %}</span>
+        <span>◎ <span data-age data-birthdate="{{ p.birth_date }}"></span> · {% if lang == 'zh' %}{{ p.hometown_zh }}{% else %}{{ p.hometown_en }}{% endif %}</span>
+      </div>
+      <p class="nju-hero__tagline">{% if lang == 'zh' %}{{ p.tagline_zh }}{% else %}{{ p.tagline_en }}{% endif %}</p>
+      <p class="nju-hero__sub">{% if lang == 'zh' %}关注人工智能、数字媒介、视觉文化与真实社会之间的连接。{% else %}Exploring how technology, platforms and visual culture shape people and society.{% endif %}</p>
+      <div class="nju-actions">
+        <a class="nju-btn nju-btn--primary" href="{% if lang == 'zh' %}/zh/research/{% else %}/research/{% endif %}">{% if lang == 'zh' %}查看研究{% else %}Explore Research{% endif %} →</a>
+        <a class="nju-btn" href="{% if lang == 'zh' %}/zh/practice/{% else %}/practice/{% endif %}">{% if lang == 'zh' %}走进现场{% else %}Fieldwork & Practice{% endif %}</a>
+      </div>
+    </div>
+    <div class="nju-hero__photo reveal">
+      <img src="{{ p.hero_photo | relative_url }}" alt="{{ p.name_en }} at Nanjing University">
+      <div class="nju-hero__photo-overlay">
+        <p>{% if lang == 'zh' %}“南大，是我看向更大世界的起点。”{% else %}“NJU is where I began looking toward a wider world.”{% endif %}</p>
+        <span>— {{ p.name_en }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nju-section nju-overview" id="about">
+  <div class="nju-section__title reveal"><div><span>01</span><h2>{% if lang == 'zh' %}关于我{% else %}About Me{% endif %}</h2></div><p>{% if lang == 'zh' %}从南大出发，连接研究、媒体与真实世界。{% else %}From campus to society: research, media and the real world.{% endif %}</p></div>
+  <div class="nju-overview__grid">
+    <div class="nju-about-card reveal">
+      {% if lang == 'zh' %}
+      <p>我是<strong>梁蔡航</strong>，南京大学新闻与传播专业硕士研究生，方向为<strong>计算传播</strong>，预计于2029年6月毕业。我的研究兴趣位于生成式人工智能、视觉传播、平台研究与定量社会科学的交叉地带。</p>
+      <p>本科就读于南京师范大学网络与新媒体专业，新闻实践、数字乡村研究与数据分析经历共同塑造了我现在的问题意识。</p>
+      {% else %}
+      <p>I am <strong>Caihang Liang</strong>, a Master's student in Journalism and Communication at <strong>Nanjing University</strong>, specializing in <strong>Computational Communication</strong>.</p>
+      <p>My work sits at the intersection of generative AI, visual communication, platform studies and quantitative social science, shaped by earlier training in journalism, rural communication and data analysis.</p>
+      {% endif %}
+      <dl class="nju-facts">
+        <div><dt>{% if lang == 'zh' %}导师{% else %}Advisor{% endif %}</dt><dd>{{ p.advisor_zh }} · {{ p.advisor_en }}</dd></div>
+        <div><dt>{% if lang == 'zh' %}家乡{% else %}Hometown{% endif %}</dt><dd>{% if lang == 'zh' %}{{ p.hometown_zh }}{% else %}{{ p.hometown_en }}{% endif %}</dd></div>
+        <div><dt>{% if lang == 'zh' %}毕业{% else %}Graduation{% endif %}</dt><dd>{% if lang == 'zh' %}{{ p.graduation_zh }}{% else %}{{ p.graduation_en }}{% endif %}</dd></div>
+      </dl>
+    </div>
+    <figure class="nju-campus-card reveal">
+      <img src="{{ p.campus_photo | relative_url }}" alt="Nanjing University campus life">
+      <figcaption>{% if lang == 'zh' %}<b>Life at NJU</b><span>在校园里学习，也在更大的社会现场理解传播。</span>{% else %}<b>Life at NJU</b><span>Learning on campus, observing communication in the wider world.</span>{% endif %}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="nju-section" id="research">
+  <div class="nju-section__title reveal"><div><span>02</span><h2>{% if lang == 'zh' %}Featured Research{% else %}Featured Research{% endif %}</h2></div><a href="{% if lang == 'zh' %}/zh/research/{% else %}/research/{% endif %}">{% if lang == 'zh' %}查看全部{% else %}View all{% endif %} →</a></div>
+  <div class="nju-research-preview">
+    {% assign count = 0 %}{% for r in site.data.research %}{% if r.featured and count < 3 %}
+    <article class="nju-research-preview__card reveal">
+      <span class="nju-card-status">{% if lang == 'zh' %}{{ r.status_zh }}{% else %}{{ r.status_en }}{% endif %}</span>
+      <h3>{% if lang == 'zh' %}{{ r.title_zh }}{% else %}{{ r.title_en }}{% endif %}</h3>
+      <p>{% if lang == 'zh' %}{{ r.summary_zh }}{% else %}{{ r.summary_en }}{% endif %}</p>
+      <div class="nju-mini-tags">{% for m in r.methods limit:3 %}<span>{{ m }}</span>{% endfor %}</div>
+    </article>
+    {% assign count = count | plus: 1 %}{% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="nju-section nju-practice-preview">
+  <div class="nju-section__title reveal"><div><span>03</span><h2>{% if lang == 'zh' %}田野与实践{% else %}Fieldwork & Practice{% endif %}</h2></div><a href="{% if lang == 'zh' %}/zh/practice/{% else %}/practice/{% endif %}">{% if lang == 'zh' %}查看全部{% else %}View all{% endif %} →</a></div>
+  <div class="nju-practice-preview__grid">
+    {% assign featured_practice = site.data.experience | where: "featured_home", true %}
+    {% for e in featured_practice %}
+    <a class="nju-photo-card reveal" {% if e.url %}href="{{ e.url }}" target="_blank" rel="noopener"{% else %}href="{% if lang == 'zh' %}/zh/practice/{% else %}/practice/{% endif %}#{{ e.id }}"{% endif %}>
+      <img src="{{ e.image | relative_url }}" alt="{% if lang == 'zh' %}{{ e.title_zh }}{% else %}{{ e.title_en }}{% endif %}">
+      <div class="nju-photo-card__overlay">
+        <div class="nju-keyword-row">{% if lang == 'zh' %}{% for k in e.keywords_zh limit:2 %}<span>{{ k }}</span>{% endfor %}{% else %}{% for k in e.keywords_en limit:2 %}<span>{{ k }}</span>{% endfor %}{% endif %}</div>
+        <h3>{% if lang == 'zh' %}{{ e.title_zh }}{% else %}{{ e.title_en }}{% endif %}</h3>
+        <p>{% if lang == 'zh' %}{{ e.summary_zh | truncate: 60 }}{% else %}{{ e.summary_en | truncate: 105 }}{% endif %}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="nju-section nju-experience-section">
+  <div class="nju-section__title reveal"><div><span>04</span><h2>{% if lang == 'zh' %}媒体与专业实践{% else %}Media & Professional Experience{% endif %}</h2></div><a href="{% if lang == 'zh' %}/zh/practice/{% else %}/practice/{% endif %}">{% if lang == 'zh' %}完整经历{% else %}Full experience{% endif %} →</a></div>
+  <div class="nju-experience-timeline reveal">
+    {% for e in site.data.experience %}{% if e.kind == 'internship' %}
+    <div class="nju-experience-row"><span>{{ e.period }}</span><div><h3>{% if lang == 'zh' %}{{ e.title_zh }}{% else %}{{ e.title_en }}{% endif %}</h3><b>{% if lang == 'zh' %}{{ e.org_zh }}{% else %}{{ e.org_en }}{% endif %}</b><p>{% if lang == 'zh' %}{{ e.summary_zh }}{% else %}{{ e.summary_en }}{% endif %}</p></div></div>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="nju-section nju-publication-preview" id="publications">
+  <div class="nju-section__title reveal"><div><span>05</span><h2>{% if lang == 'zh' %}代表性成果{% else %}Selected Publications & Research{% endif %}</h2></div><a href="{% if lang == 'zh' %}/zh/research/#publications{% else %}/research/#publications{% endif %}">{% if lang == 'zh' %}更多成果{% else %}More{% endif %} →</a></div>
+  <div class="nju-pub-split">
+    <div class="nju-pub-list reveal">
+      {% for r in site.data.research limit:3 %}
+      <div class="nju-pub-row"><span>{{ r.period }}</span><div><b>{% if lang == 'zh' %}{{ r.title_zh }}{% else %}{{ r.title_en }}{% endif %}</b><small>{% if lang == 'zh' %}{{ r.status_zh }}{% else %}{{ r.status_en }}{% endif %}</small></div></div>
+      {% endfor %}
+    </div>
+    <aside class="nju-honors-mini reveal">
+      <h3>{% if lang == 'zh' %}精选荣誉{% else %}Selected Honors{% endif %}</h3>
+      <div class="nju-honors-mini__grid">{% for h in site.data.honors limit:4 %}<div><span>{{ h.year }}</span><b>{% if lang == 'zh' %}{{ h.title_zh }}{% else %}{{ h.title_en }}{% endif %}</b></div>{% endfor %}</div>
+    </aside>
+  </div>
+</section>
+
+<section class="nju-section nju-contact-band reveal">
+  <div><span class="nju-eyebrow">CONTACT</span><h2>{% if lang == 'zh' %}如果你也关心 AI、传播与真实社会，欢迎来聊。{% else %}If you care about AI, communication and real social questions, let's talk.{% endif %}</h2></div>
+  <div><a class="nju-btn nju-btn--primary" href="mailto:{{ p.email }}">{{ p.email }}</a><a class="nju-btn" href="{{ p.github }}" target="_blank" rel="noopener">GitHub ↗</a></div>
+</section>

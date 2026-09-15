@@ -1,0 +1,316 @@
+
+/* =========================================================
+   Caihang Liang · NJU Purple v1.1 refinement patch
+   Purpose: layout fixes + work/practice consistency
+   ========================================================= */
+
+:root {
+  --v11-purple: #4d0099;
+  --v11-purple-deep: #35105f;
+  --v11-purple-soft: #eee6f7;
+  --v11-cream: #f7f3ec;
+  --v11-paper: #fffdf9;
+  --v11-ink: #261c2f;
+  --v11-muted: #6e6275;
+  --v11-line: rgba(77,0,153,.18);
+}
+
+/* 1) Never reveal a white/blank strip when rubber-banding at page edges. */
+html {
+  background: var(--v11-cream) !important;
+  overscroll-behavior-y: none;
+  min-height: 100%;
+}
+body {
+  background: var(--v11-cream) !important;
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+  margin: 0;
+}
+body, .page, .page__inner-wrap, main {
+  padding-bottom: 0;
+}
+body > :last-child,
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 2) Chinese hero: two intentional lines, never "梁 / 蔡航" by accidental wrapping. */
+.v11-hero-fixed {
+  white-space: normal !important;
+  line-height: 1.06 !important;
+  text-wrap: balance;
+}
+.v11-hero-fixed .v11-hero-line {
+  display: block;
+}
+.v11-hero-fixed .v11-hero-hi {
+  font-size: .62em;
+  font-weight: 500;
+  letter-spacing: .02em;
+  margin-bottom: .18em;
+}
+.v11-hero-fixed .v11-hero-name {
+  white-space: nowrap;
+}
+
+/* 3) About: remove forced height / empty lower half on either language page. */
+.v11-about-section {
+  min-height: 0 !important;
+  height: auto !important;
+  align-items: start !important;
+  padding-top: clamp(3.2rem, 7vw, 6.5rem) !important;
+  padding-bottom: clamp(3.2rem, 7vw, 6.5rem) !important;
+}
+.v11-about-section > *,
+.v11-about-section [class*="grid"],
+.v11-about-section [class*="column"],
+.v11-about-section [class*="copy"],
+.v11-about-section [class*="text"] {
+  min-height: 0 !important;
+  height: auto !important;
+  align-self: start !important;
+}
+.v11-about-section img {
+  max-height: min(54vh, 500px);
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 4) Research: the two requested projects become text-only, consistently. */
+.v11-research-text-only [class*="image"],
+.v11-research-text-only [class*="media"],
+.v11-research-text-only figure,
+.v11-research-text-only > img,
+.v11-research-text-only a > img {
+  display: none !important;
+}
+.v11-research-text-only {
+  grid-template-columns: 1fr !important;
+}
+
+/* 5) Honor certificates are a separate gallery; honor list stays text-only. */
+.v11-cert-block {
+  margin: 2rem 0 2.75rem;
+  padding: 1.25rem 0 .25rem;
+  border-top: 1px solid var(--v11-line);
+}
+.v11-cert-block h3 {
+  margin: 0 0 1rem;
+  color: var(--v11-purple-deep);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+.v11-cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .85rem;
+}
+.v11-cert-gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--v11-paper);
+  border: 1px solid var(--v11-line);
+  box-shadow: 0 9px 28px rgba(53,16,95,.07);
+}
+.v11-cert-gallery img {
+  display: block !important;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+.v11-cert-gallery a:hover img {
+  transform: scale(1.025);
+}
+.v11-honor-original-media {
+  display: none !important;
+}
+
+/* New Work page */
+.v11-portfolio-shell,
+.v11-practice-links {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 7rem) clamp(1.1rem, 4vw, 2.6rem);
+  color: var(--v11-ink);
+}
+.v11-section-heading {
+  max-width: 820px;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+.v11-section-heading--compact {
+  margin-bottom: 2rem;
+}
+.v11-eyebrow,
+.v11-work-source {
+  margin: 0 0 .55rem;
+  color: var(--v11-purple);
+  font-size: .76rem;
+  font-weight: 750;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.v11-section-heading h1,
+.v11-section-heading h2 {
+  margin: 0;
+  color: var(--v11-purple-deep);
+  font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+  font-size: clamp(2.1rem, 5.5vw, 4.35rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.v11-section-heading--compact h2 {
+  font-size: clamp(1.9rem, 4vw, 3.25rem);
+}
+.v11-section-intro {
+  max-width: 720px;
+  margin: 1.1rem 0 0;
+  color: var(--v11-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.v11-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.15rem, 2.4vw, 2rem);
+}
+.v11-work-card {
+  overflow: hidden;
+  border: 1px solid var(--v11-line);
+  border-radius: 20px;
+  background: var(--v11-paper);
+  box-shadow: 0 14px 44px rgba(53,16,95,.07);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.v11-work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 50px rgba(53,16,95,.11);
+}
+.v11-work-cover {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(145deg, #efe5f8, #e2d3f1);
+}
+.v11-work-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .28s ease;
+}
+.v11-work-card:hover .v11-work-cover img {
+  transform: scale(1.025);
+}
+.v11-work-cover--placeholder {
+  display: grid;
+  place-items: end start;
+  padding: 1.25rem;
+  color: var(--v11-purple-deep);
+  text-decoration: none;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(77,0,153,.16), transparent 26%),
+    linear-gradient(135deg, #f4eef9, #e7daf3);
+}
+.v11-work-cover--placeholder span {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.v11-work-copy {
+  padding: 1.25rem 1.35rem 1.45rem;
+}
+.v11-work-copy h2 {
+  margin: 0 0 .9rem;
+  color: var(--v11-ink);
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  line-height: 1.45;
+  letter-spacing: -.015em;
+}
+.v11-inline-link {
+  color: var(--v11-purple);
+  text-decoration: none;
+  font-weight: 720;
+}
+.v11-inline-link:hover {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+/* Linked practice cards appended to the existing Practice page */
+.v11-practice-links {
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+}
+.v11-practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+.v11-practice-card {
+  display: grid;
+  grid-template-columns: minmax(135px, 36%) 1fr;
+  overflow: hidden;
+  min-height: 180px;
+  border: 1px solid var(--v11-line);
+  border-radius: 18px;
+  background: var(--v11-paper);
+}
+.v11-practice-card:not(:has(img)) {
+  grid-template-columns: 1fr;
+}
+.v11-practice-card > a:first-child {
+  min-height: 100%;
+}
+.v11-practice-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  object-fit: cover;
+}
+.v11-practice-copy {
+  padding: 1.1rem 1.2rem 1.25rem;
+}
+.v11-practice-copy h3 {
+  margin: 0 0 .55rem;
+  color: var(--v11-purple-deep);
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+.v11-practice-copy p {
+  margin: 0 0 .85rem;
+  color: var(--v11-muted);
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 820px) {
+  .v11-work-grid,
+  .v11-practice-grid {
+    grid-template-columns: 1fr;
+  }
+  .v11-cert-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .v11-practice-card {
+    grid-template-columns: 34% 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .v11-portfolio-shell,
+  .v11-practice-links {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .v11-practice-card {
+    grid-template-columns: 1fr;
+  }
+  .v11-practice-card img {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+  .v11-cert-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}

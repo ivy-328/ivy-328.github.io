@@ -1,0 +1,125 @@
+- id: bozhou
+  kind: field
+  title_en: Teaching Support in Bozhou
+  title_zh: 安徽亳州支教实践
+  org_en: Bozhou, Anhui
+  org_zh: 安徽省亳州市
+  period: ''
+  image: /images/nju/bozhou-teaching.jpg
+  keywords_en:
+  - Teaching Support
+  - Youth Service
+  - Grassroots Education
+  keywords_zh:
+  - 支教陪伴
+  - 青年服务
+  - 基层教育
+  summary_en: Participated in teaching-support activities in Bozhou, engaging directly
+    with children and grassroots educational settings.
+  summary_zh: 参与安徽亳州支教活动，在真实课堂与儿童互动中理解基层教育场景，也把传播与服务意识带入社会实践。
+  featured_home: true
+- id: xuyi-live
+  kind: internship
+  title_en: Livestream & E-commerce Practice
+  title_zh: 直播电商与新媒体实践
+  org_en: Jiangsu Xuyi Lobster Co., Ltd.
+  org_zh: 江苏盱眙龙虾股份有限公司
+  period: 2023.07–2023.09
+  image: /images/nju/xuyi-livestream-team.jpg
+  secondary_image: /images/nju/xuyi-livestream-phone.jpg
+  keywords_en:
+  - 20+ Livestreams
+  - RMB 24,800 Sales
+  - Digital Commerce
+  keywords_zh:
+  - 20+场直播
+  - 促销24800元
+  - 数字助农
+  summary_en: Hosted more than 20 Douyin livestreams and helped promote RMB 24,800
+    in agricultural products while exploring locally grounded digital-commerce models.
+  summary_zh: 担任农产品带货主播，主持抖音直播20余次，促销农副产品24800元，并参与“数商兴农”调研，探索具有社会效益的特色农产品电商模式。
+  featured_home: true
+- id: county-stage
+  kind: media
+  title_en: Youth on the County Stage
+  title_zh: 中国式现代化·青年在“县”场
+  org_en: Xuyi, Jiangsu
+  org_zh: 江苏盱眙
+  period: '2024'
+  image: /images/nju/county-stage.jpg
+  secondary_image: /images/nju/media-fieldwork.jpg
+  url: https://wap.yzwb.net/wap/news//4079077.html
+  keywords_en:
+  - County Observation
+  - Video Production
+  - Agricultural Modernization
+  keywords_zh:
+  - 县域观察
+  - 视频拍摄
+  - 农业现代化
+  summary_en: Participated in on-site media production around Xuyi’s crayfish–rice
+    industry, using youth-oriented storytelling to document county-level agricultural
+    modernization.
+  summary_zh: 参与“中国式现代化·青年在‘县’场”相关拍摄，以青年视角记录盱眙小龙虾、虾稻共生与县域农业现代化实践。
+  featured_home: true
+- id: xinhua
+  kind: internship
+  title_en: Visual Journalism Internship
+  title_zh: 视觉新闻与采访实践
+  org_en: Xinhua Daily Media Group
+  org_zh: 新华日报 / 交汇点新闻
+  period: 2024.01–2024.03
+  image: ''
+  keywords_en:
+  - Reporting
+  - Photography
+  - Video Hosting
+  keywords_zh:
+  - 采访报道
+  - 新闻摄影
+  - 视频主持
+  summary_en: Worked on story planning, interview coordination, field reporting, photography
+    and video hosting; six pieces were published across Xinhua Daily, Junction News
+    and Visual Jiangsu.
+  summary_zh: 参与选题策划、采访对接、现场采访、视频主持与摄影等工作，6项作品发表于《新华日报》、交汇点与视觉江苏等平台。
+  featured_home: false
+- id: converged-media
+  kind: internship
+  title_en: County Converged Media Internship
+  title_zh: 县级融媒体新闻实践
+  org_en: Xuyi County Converged Media Center
+  org_zh: 盱眙县融媒体中心
+  period: 2023.01–2023.03
+  image: ''
+  keywords_en:
+  - Newsroom
+  - Local Stories
+  - Converged Media
+  keywords_zh:
+  - 新闻采编
+  - 基层故事
+  - 融媒转型
+  summary_en: Participated in newsroom reporting, content production and photography,
+    gaining first-hand experience of local-media workflows and transformation.
+  summary_zh: 作为见习记者深入参与新闻采编、内容制作与拍摄，报道基层故事，并观察县级融媒体的运作方式与转型困境。
+  featured_home: false
+- id: community
+  kind: service
+  title_en: Community Service
+  title_zh: 社区志愿服务
+  org_en: Community Engagement
+  org_zh: 社区志愿服务
+  period: ''
+  image: /images/nju/community-service.jpg
+  keywords_en:
+  - Volunteering
+  - Community
+  - Public Service
+  keywords_zh:
+  - 志愿服务
+  - 社区参与
+  - 公共责任
+  summary_en: Community-oriented volunteering that connects communication skills with
+    everyday public service.
+  summary_zh: 从身边小事参与社区志愿服务，在具体行动中理解公共责任与社会连接。
+  featured_home: true

@@ -1,0 +1,38 @@
+{% assign lang = include.lang | default: "en" %}
+<!-- NJU-V11-PRACTICE-LINKS -->
+<section class="v11-practice-links" id="linked-practice-stories">
+  <header class="v11-section-heading v11-section-heading--compact">
+    <p class="v11-eyebrow">{% if lang == "zh" %}实践链接 / FIELD NOTES{% else %}FIELD NOTES / 实践链接{% endif %}</p>
+    <h2>{% if lang == "zh" %}实践中的报道与作品{% else %}Stories from Practice{% endif %}</h2>
+    <p class="v11-section-intro">
+      {% if lang == "zh" %}
+      原先放在 Work 页的社会实践内容统一移到这里；新闻作品页不再混入实践分类。
+      {% else %}
+      Social-practice items formerly mixed into Work now live here, keeping the journalism portfolio focused.
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="v11-practice-grid">
+    {% for item in site.data.portfolio_v11.practice %}
+      <article class="v11-practice-card">
+        {% if item.image != "" %}
+          {% if item.url != "" %}<a href="{{ item.url }}" target="_blank" rel="noopener">{% endif %}
+          <img src="{{ item.image | relative_url }}"
+               alt="{% if lang == "zh" %}{{ item.title_zh }}{% else %}{{ item.title_en }}{% endif %}"
+               loading="lazy">
+          {% if item.url != "" %}</a>{% endif %}
+        {% endif %}
+        <div class="v11-practice-copy">
+          <h3>{% if lang == "zh" %}{{ item.title_zh }}{% else %}{{ item.title_en }}{% endif %}</h3>
+          <p>{% if lang == "zh" %}{{ item.note_zh }}{% else %}{{ item.note_en }}{% endif %}</p>
+          {% if item.url != "" %}
+            <a class="v11-inline-link" href="{{ item.url }}" target="_blank" rel="noopener">
+              {% if lang == "zh" %}查看相关页面{% else %}Open related story{% endif %} ↗
+            </a>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

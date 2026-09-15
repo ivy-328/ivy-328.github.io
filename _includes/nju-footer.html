@@ -1,0 +1,12 @@
+{% assign p = site.data.profile %}
+<footer class="nju-footer">
+  <div class="nju-footer__mission">
+    <span class="nju-footer__quote-mark">“</span>
+    <p>{% if page.lang == 'zh' %}{{ p.mission_zh }}{% else %}{{ p.mission_en }}{% endif %}</p>
+  </div>
+  <div class="nju-footer__bar">
+    <div><strong>南京大学</strong><span>NANJING UNIVERSITY</span><i></i><span>{{ p.name_en }}</span></div>
+    <div><span>{% if page.lang == 'zh' %}以数据读懂时代，以传播连接社会。{% else %}Media for a warmer, more connected world.{% endif %}</span></div>
+  </div>
+  <p class="nju-footer__disclaimer">Personal academic website · Nanjing University affiliation shown for identification; this is not an official NJU website.</p>
+</footer>
