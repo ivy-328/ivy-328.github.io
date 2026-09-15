@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站内容更新说明</title>
+  <meta name="description" content="个人网站内容更新与 GitHub Pages 发布说明">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --paper: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --line: #e5e5e2;
+      --accent: #4b2e83;
+      --code-bg: #f2f2ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    .page {
+      width: min(860px, calc(100% - 32px));
+      margin: 56px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 56px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 54px);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    section {
+      padding-top: 44px;
+      margin-top: 44px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 26px 0 8px;
+      font-size: 17px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    code {
+      padding: 2px 6px;
+      background: var(--code-bg);
+      border-radius: 6px;
+      font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+      font-size: .92em;
+    }
+
+    pre {
+      overflow-x: auto;
+      margin: 18px 0;
+      padding: 18px 20px;
+      background: #1f1f1f;
+      color: #f5f5f5;
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+
+    pre code {
+      padding: 0;
+      background: transparent;
+      color: inherit;
+    }
+
+    .flow {
+      margin: 24px 0 0;
+      padding: 18px 20px;
+      background: var(--code-bg);
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .file-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .file {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .file strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .file p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--accent);
+      background: #f7f4fb;
+      border-radius: 0 10px 10px 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        margin: 16px auto;
+        padding: 28px 22px;
+        border-radius: 14px;
+      }
+
+      .file-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding-top: 34px;
+        margin-top: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <p class="eyebrow">Website Maintenance</p>
+    <h1>网站内容更新说明</h1>
+
+    <p class="lead">
+      本个人网站基于 Jekyll + GitHub Pages 搭建，初始建站方法参考
+      Jay Rob Williams 的 <em>Building an Academic Website</em> 教程，
+      并在此基础上根据个人展示需求进行了进一步的页面设计与内容结构调整。
+    </p>
+
+    <div class="flow">
+      本地修改内容 → Git 记录版本 → Push 到 GitHub → GitHub Pages 自动重新发布
+    </div>
+
+    <section>
+      <h2>1. 网站内容主要存放在哪里</h2>
+
+      <p>
+        为方便后续维护，网站中的个人内容与页面样式尽量分开存放。
+        日常更新时通常只需要修改 <code>_data</code> 文件夹中的数据文件和
+        <code>images</code> 文件夹中的图片。
+      </p>
+
+      <div class="file-grid">
+        <div class="file">
+          <strong><code>_data/profile.yml</code></strong>
+          <p>姓名、学校、专业、研究方向、邮箱、个人简介和首页照片等。</p>
+        </div>
+
+        <div class="file">
+          <strong><code>_data/research.yml</code></strong>
+          <p>研究项目、研究状态、时间、摘要、方法和相关信息。</p>
+        </div>
+
+        <div class="file">
+          <strong><code>_data/portfolio_v11.yml</code></strong>
+          <p>Work 页面中的新闻、评论、视觉作品、封面和原文链接。</p>
+        </div>
+
+        <div class="file">
+          <strong><code>_data/experience.yml</code></strong>
+          <p>实践、实习、项目经历、图片和相关链接。</p>
+        </div>
+
+        <div class="file">
+          <strong><code>_data/honors.yml</code></strong>
+          <p>荣誉、比赛获奖及相关说明。</p>
+        </div>
+
+        <div class="file">
+          <strong><code>images/</code></strong>
+          <p>个人照片、作品封面、实践照片及其他图片素材。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 哪些文件一般不需要日常修改</h2>
+
+      <p>
+        以下目录主要负责页面结构、组件和视觉样式：
+      </p>
+
+      <ul>
+        <li><code>_pages/</code>：页面内容与页面入口</li>
+        <li><code>_includes/</code>：可重复使用的页面组件</li>
+        <li><code>_layouts/</code>：页面整体布局</li>
+        <li><code>_sass/</code>、<code>assets/</code>：样式与前端资源</li>
+      </ul>
+
+      <div class="note">
+        日常新增研究、作品、经历或荣誉时，优先修改数据文件；
+        只有需要改变页面布局、导航或视觉效果时，才修改这些结构文件。
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 一次完整的网站更新流程</h2>
+
+      <p>完成内容修改后，在 Git Bash 中进入本地网站仓库：</p>
+
+      <pre><code>cd /d/git_projects/ivy-328.github.io</code></pre>
+
+      <p>检查发生了哪些变化：</p>
+
+      <pre><code>git status</code></pre>
+
+      <p>确认修改后，将本次变化加入 Git：</p>
+
+      <pre><code>git add -A</code></pre>
+
+      <p>创建一个版本记录：</p>
+
+      <pre><code>git commit -m "Update website content"</code></pre>
+
+      <p>最后上传到 GitHub：</p>
+
+      <pre><code>git push origin master</code></pre>
+
+      <p>
+        Push 成功后，GitHub Pages 会自动重新构建并发布网站。
+        一般不需要手动生成或上传 HTML 文件。
+      </p>
+    </section>
+
+    <section>
+      <h2>4. 一个简单的更新例子</h2>
+
+      <p>
+        例如，要在 Research 页面增加一个新的研究项目，可以打开
+        <code>_data/research.yml</code>，参考已有项目的格式增加一组数据：
+      </p>
+
+      <pre><code>- id: example-project
+  featured: true
+  title_en: Example Research Project
+  title_zh: 示例研究项目
+  status_en: Research in Progress
+  status_zh: 研究进行中
+  period: 2026–
+  summary_en: Brief introduction to the research project.
+  summary_zh: 此处填写研究项目的中文简介。
+  methods:
+    - Content Analysis
+    - Survey</code></pre>
+
+      <p>
+        保存后执行 Git 提交和 Push，页面模板会自动读取新的数据。
+        更新 Work、Practice 和 Honors 时也采用相同思路。
+      </p>
+    </section>
+
+    <section>
+      <h2>5. 图片如何更新</h2>
+
+      <p>
+        新图片先放入 <code>images/</code> 下对应的位置，再在相关数据文件中填写路径，例如：
+      </p>
+
+      <pre><code>image: /images/work/example.jpg</code></pre>
+
+      <p>
+        图片上传前应适当压缩，并尽量使用简洁的英文文件名，以减少路径错误并提高网页加载速度。
+      </p>
+    </section>
+
+    <section>
+      <h2>6. 发布检查与版本恢复</h2>
+
+      <p>
+        Push 后，可以在 GitHub 仓库的 <strong>Actions</strong> 页面查看 GitHub Pages 是否部署成功。
+        如果部署成功但浏览器仍显示旧页面，可以使用 <code>Ctrl + F5</code> 强制刷新。
+      </p>
+
+      <p>网站的 Git 历史也可以用于查看以前的版本：</p>
+
+      <pre><code>git log --oneline</code></pre>
+
+      <p>如需撤销某一次错误更新，可优先采用：</p>
+
+      <pre><code>git revert &lt;commit-id&gt;
+git push origin master</code></pre>
+    </section>
+
+    <section>
+      <h2>7. 建站方法说明</h2>
+
+      <p>
+        本网站的初始搭建方式参考
+        <a href="https://jayrobwilliams.com/posts/2020/06/academic-website/" target="_blank" rel="noopener">
+          Jay Rob Williams, “Building an Academic Website”
+        </a>。
+      </p>
+
+      <p>
+        在原有 Jekyll + GitHub Pages 工作流基础上，网站进一步进行了个性化页面设计，
+        并将主要个人内容拆分为独立的数据文件，以降低日常更新对 HTML/CSS 页面结构的依赖。
+      </p>
+    </section>
+
+    <footer>
+      Website Maintenance Guide · GitHub Pages / Jekyll
+    </footer>
+  </main>
+</body>
+</html>
